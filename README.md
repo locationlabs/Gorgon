@@ -5,7 +5,7 @@ Medusa is lightweight abstraction for distributing the responsibility of the
 In operating system computing, a daemon is a process that runs in the background rather than being
 controlled by the user. Medusa borrows from this concept to break up the UIApplicationDelegate
 that responds to the UIApplication singleton events into daemons which are started when the application
-starts (therefore exist for the life of the application) and wait to the triggered by the `DaemonManager`.
+starts (therefore exist for the life of the application) and wait to be triggered by the `DaemonManager`.
 The user never interacts with the daemons directly.
 
 ## Features
