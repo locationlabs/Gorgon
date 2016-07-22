@@ -12,7 +12,7 @@ final public class Token {
     /// the origin of the push token
     public let origin: Origin
     
-    init(token: NSData, origin: Origin) {
+    public init(token: NSData, origin: Origin) {
         self.token = token
         self.origin = origin
     }

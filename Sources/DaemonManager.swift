@@ -1,7 +1,6 @@
 import Foundation
 
 
-
 /**
  The Daemon manages the DaemonType's that are registered. The Daemon is a accessed via the sharedInstance and thus
  will live for the life of the application once a daemon has been registered. Daemons are meant to be long lived and
@@ -143,7 +142,7 @@ public extension DaemonManager {
      - parameter userInfo:   the payload of the push
      - parameter completion: the completion callback
      */
-    public func handleRemoveNotification(userInfo: [NSObject:AnyObject], completion: (UIBackgroundFetchResult) -> Void) {
+    public func handleRemoteNotification(userInfo: [NSObject:AnyObject], completion: (UIBackgroundFetchResult) -> Void) {
         if let userInfo = userInfo as? [String:AnyObject], let aps = userInfo["aps"] as? [String:AnyObject] {
             // Pushes from legacy systems may not have a category.  We support them
             // with this constant.  Only one daemon can have no category.
@@ -172,22 +171,22 @@ public extension DaemonManager {
 extension DaemonManager {
     private func registerLifecycleNotifications() {
         NSNotificationCenter.defaultCenter()
-            .addObserver(self, selector: #selector(onApplicationDidFinishLaunching(_:)),
+            .addObserver(self, selector: Selector("onApplicationDidFinishLaunching:"),
                          name: UIApplicationDidFinishLaunchingNotification, object: nil)
         NSNotificationCenter.defaultCenter()
-            .addObserver(self, selector: #selector(onApplicationWillResignActive(_:)),
+            .addObserver(self, selector: Selector("onApplicationWillResignActive:"),
                          name: UIApplicationWillResignActiveNotification, object: nil)
         NSNotificationCenter.defaultCenter()
-            .addObserver(self, selector: #selector(onApplicationDidEnterBackground(_:)),
+            .addObserver(self, selector: Selector("onApplicationDidEnterBackground:"),
                          name: UIApplicationDidEnterBackgroundNotification, object: nil)
         NSNotificationCenter.defaultCenter()
-            .addObserver(self, selector: #selector(onApplicationWillEnterForeground(_:)),
+            .addObserver(self, selector: Selector("onApplicationWillEnterForeground:"),
                          name: UIApplicationWillEnterForegroundNotification, object: nil)
         NSNotificationCenter.defaultCenter()
-            .addObserver(self, selector: #selector(onApplicationDidBecomeActive(_:)),
+            .addObserver(self, selector: Selector("onApplicationDidBecomeActive:"),
                          name: UIApplicationDidBecomeActiveNotification, object: nil)
         NSNotificationCenter.defaultCenter()
-            .addObserver(self, selector: #selector(onApplicationWillTerminate(_:)),
+            .addObserver(self, selector: Selector("onApplicationWillTerminate:"),
                          name: UIApplicationWillTerminateNotification, object: nil)
     }
     
