@@ -23,7 +23,19 @@ See [Boa][5], a sample app written in Swift, for details.
 - Xcode 7.3+
 
 ## Installation
-WIP
+Medusa is available through [CocoaPods](https://cocoapods.org).
+
+### CocoaPods
+
+To install Medusa with CocoaPods, add the following lines to your `Podfile`.
+
+    source 'https://github.com/CocoaPods/Specs.git'
+    platform :ios, '8.0'
+    use_frameworks!
+
+    pod 'Medusa', '~> 1.0'
+
+Then run `pod install` command. For details of the installation and usage of CocoaPods, visit [its official website](https://cocoapods.org).
 
 ## Documentation
 WIP
