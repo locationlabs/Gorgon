@@ -1,4 +1,7 @@
 # Medusa
+
+[![Build Status](https://travis-ci.org/locationlabs/Medusa.svg?branch=master)](https://travis-ci.org/locationlabs/Medusa)
+
 Medusa is lightweight abstraction for distributing the responsibility of the
 `UIApplicationDelegate` into several [single responsibility][1] daemons.
 
