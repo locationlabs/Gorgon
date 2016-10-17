@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name                      = 'Medusa'
   s.module_name               = 'Medusa'
-  s.version                   = '1.0.0'
+  s.version                   = '1.1.0'
   s.summary                   = 'Application daemon framework for Single Responsibility Principle abstractions of the UIApplicationDelegate'
   s.homepage                  = 'http://www.locationlabs.com'
   s.license                   = 'APL2'
