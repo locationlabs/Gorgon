@@ -23,12 +23,10 @@ GEM
       molinillo (~> 0.4.0)
       nap (~> 1.0)
       xcodeproj (~> 0.28.2)
-    cocoapods-clean (0.0.1)
     cocoapods-core (0.39.0)
       activesupport (>= 4.0.2)
       fuzzy_match (~> 2.0.4)
       nap (~> 1.0)
-    cocoapods-deintegrate (1.0.1)
     cocoapods-downloader (0.9.3)
     cocoapods-plugins (0.4.2)
       nap
@@ -60,8 +58,6 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods (~> 0.39)
-  cocoapods-clean
-  cocoapods-deintegrate
 
 BUNDLED WITH
    1.12.5
