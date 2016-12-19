@@ -1,4 +1,4 @@
-
+import Foundation
 
 /**
  The NotificationCenterDaemonType to handle notifications from the default NSNotificationCenter

@@ -1,4 +1,4 @@
-import Medusa
+import Gorgon
 
 
 class FooDaemon {

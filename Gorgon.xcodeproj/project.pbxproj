@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63345DAC5F71E855A8399D0D /* Pods_CobraBase_Medusa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B77DA0D064629ED2391765A /* Pods_CobraBase_Medusa.framework */; };
-		903EDF0B1CC19DAA00AF813C /* Medusa.h in Headers */ = {isa = PBXBuildFile; fileRef = 903EDF0A1CC19DAA00AF813C /* Medusa.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		903EDF121CC19DAA00AF813C /* Medusa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903EDF071CC19DAA00AF813C /* Medusa.framework */; };
+		425103AE664C3F48CD11719A /* Pods_GorgonBase_Gorgon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C00D4B501C2F264259EE50F /* Pods_GorgonBase_Gorgon.framework */; };
+		4742497C12CAD433D922E3BA /* Pods_GorgonBase_GorgonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B30F873B386B5F72C3F4BB /* Pods_GorgonBase_GorgonTests.framework */; };
+		903EDF0B1CC19DAA00AF813C /* Gorgon.h in Headers */ = {isa = PBXBuildFile; fileRef = 903EDF0A1CC19DAA00AF813C /* Gorgon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		903EDF121CC19DAA00AF813C /* Gorgon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903EDF071CC19DAA00AF813C /* Gorgon.framework */; };
 		903EDF171CC19DAA00AF813C /* UrlSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF161CC19DAA00AF813C /* UrlSpecs.swift */; };
 		903EDF261CC1B5FF00AF813C /* DaemonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF251CC1B5FF00AF813C /* DaemonManager.swift */; };
 		903EDF2E1CC1B64300AF813C /* ApplicationDaemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF271CC1B64300AF813C /* ApplicationDaemonType.swift */; };
@@ -25,8 +26,10 @@
 		903EDF401CC1B81200AF813C /* BazDaemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF3D1CC1B81200AF813C /* BazDaemon.swift */; };
 		903EDF411CC1B81200AF813C /* FooDaemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF3E1CC1B81200AF813C /* FooDaemon.swift */; };
 		903EDF8A1CC5A4AE00AF813C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF861CC5A46000AF813C /* Log.swift */; };
+		B03BFF4C1E08A8CF0036042A /* Pods_GorgonBase_GorgonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03BFF4B1E08A8CF0036042A /* Pods_GorgonBase_GorgonTests.framework */; };
 		B05EF1011E08635F003E6C89 /* DaemonManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF391CC1B7CC00AF813C /* DaemonManagerSpec.swift */; };
 		B884EA69CA39E30F5F8E2A68 /* Pods_CobraBase_MedusaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16A11B3875F690526E73FDB /* Pods_CobraBase_MedusaTests.framework */; };
+		F0F501E746BE53716D980364 /* Pods_CobraBase_HydraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE7C829D8DB9C26A4AA0788 /* Pods_CobraBase_HydraTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,15 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A5980CF567E4DF9352B0845 /* Pods-CobraBase-Medusa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CobraBase-Medusa.release.xcconfig"; path = "Pods/Target Support Files/Pods-CobraBase-Medusa/Pods-CobraBase-Medusa.release.xcconfig"; sourceTree = "<group>"; };
+		0FA54B2BEFEAB56CFB77C00C /* Pods-GorgonBase-Gorgon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorgonBase-Gorgon.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorgonBase-Gorgon/Pods-GorgonBase-Gorgon.release.xcconfig"; sourceTree = "<group>"; };
+		2AE7C829D8DB9C26A4AA0788 /* Pods_CobraBase_HydraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CobraBase_HydraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B77DA0D064629ED2391765A /* Pods_CobraBase_Medusa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CobraBase_Medusa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B1BAA90F76A8F7CD857E648 /* Pods-CobraBase-MedusaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CobraBase-MedusaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CobraBase-MedusaTests/Pods-CobraBase-MedusaTests.release.xcconfig"; sourceTree = "<group>"; };
-		674EFCEE62F26B39B127E237 /* Pods-CobraBase-Medusa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CobraBase-Medusa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CobraBase-Medusa/Pods-CobraBase-Medusa.debug.xcconfig"; sourceTree = "<group>"; };
-		8C44ECF38CCBB21F8422C887 /* Pods-CobraBase-MedusaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CobraBase-MedusaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CobraBase-MedusaTests/Pods-CobraBase-MedusaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		903EDF071CC19DAA00AF813C /* Medusa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Medusa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		903EDF0A1CC19DAA00AF813C /* Medusa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Medusa.h; sourceTree = "<group>"; };
+		687AFBF023C19838E4A3041F /* Pods-GorgonBase-GorgonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorgonBase-GorgonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorgonBase-GorgonTests/Pods-GorgonBase-GorgonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C00D4B501C2F264259EE50F /* Pods_GorgonBase_Gorgon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GorgonBase_Gorgon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		903EDF071CC19DAA00AF813C /* Gorgon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gorgon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		903EDF0A1CC19DAA00AF813C /* Gorgon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gorgon.h; sourceTree = "<group>"; };
 		903EDF0C1CC19DAA00AF813C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		903EDF111CC19DAA00AF813C /* MedusaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedusaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		903EDF111CC19DAA00AF813C /* GorgonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorgonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		903EDF161CC19DAA00AF813C /* UrlSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSpecs.swift; sourceTree = "<group>"; };
 		903EDF181CC19DAA00AF813C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		903EDF251CC1B5FF00AF813C /* DaemonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DaemonManager.swift; path = Sources/DaemonManager.swift; sourceTree = SOURCE_ROOT; };
@@ -67,7 +70,12 @@
 		903EDF3E1CC1B81200AF813C /* FooDaemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooDaemon.swift; sourceTree = "<group>"; };
 		903EDF861CC5A46000AF813C /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		A16A11B3875F690526E73FDB /* Pods_CobraBase_MedusaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CobraBase_MedusaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C17557B838F42AACA62D7B /* Pods-GorgonBase-Gorgon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorgonBase-Gorgon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorgonBase-Gorgon/Pods-GorgonBase-Gorgon.debug.xcconfig"; sourceTree = "<group>"; };
+		B03BFF4B1E08A8CF0036042A /* Pods_GorgonBase_GorgonTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_GorgonBase_GorgonTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_GorgonBase_GorgonTests.framework"; sourceTree = "<group>"; };
+		B45FE4DFBDCAC8049AD9AF10 /* Pods-GorgonBase-GorgonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorgonBase-GorgonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorgonBase-GorgonTests/Pods-GorgonBase-GorgonTests.release.xcconfig"; sourceTree = "<group>"; };
 		D48A9AE377EC2AC53C36540A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B30F873B386B5F72C3F4BB /* Pods_GorgonBase_GorgonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GorgonBase_GorgonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE0E46D16E9B1C852913ECE /* Pods_CobraBase_Hydra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CobraBase_Hydra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63345DAC5F71E855A8399D0D /* Pods_CobraBase_Medusa.framework in Frameworks */,
+				B03BFF4C1E08A8CF0036042A /* Pods_GorgonBase_GorgonTests.framework in Frameworks */,
+				425103AE664C3F48CD11719A /* Pods_GorgonBase_Gorgon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +92,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903EDF121CC19DAA00AF813C /* Medusa.framework in Frameworks */,
+				903EDF121CC19DAA00AF813C /* Gorgon.framework in Frameworks */,
 				B884EA69CA39E30F5F8E2A68 /* Pods_CobraBase_MedusaTests.framework in Frameworks */,
+				F0F501E746BE53716D980364 /* Pods_CobraBase_HydraTests.framework in Frameworks */,
+				4742497C12CAD433D922E3BA /* Pods_GorgonBase_GorgonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +116,8 @@
 		903EDF081CC19DAA00AF813C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				903EDF071CC19DAA00AF813C /* Medusa.framework */,
-				903EDF111CC19DAA00AF813C /* MedusaTests.xctest */,
+				903EDF071CC19DAA00AF813C /* Gorgon.framework */,
+				903EDF111CC19DAA00AF813C /* GorgonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,7 +131,7 @@
 				903EDF861CC5A46000AF813C /* Log.swift */,
 				903EDF351CC1B6D200AF813C /* Token.swift */,
 				903EDF361CC1B6D200AF813C /* Url.swift */,
-				903EDF0A1CC19DAA00AF813C /* Medusa.h */,
+				903EDF0A1CC19DAA00AF813C /* Gorgon.h */,
 				903EDF0C1CC19DAA00AF813C /* Info.plist */,
 			);
 			name = Source;
@@ -164,9 +175,14 @@
 		A30FD0A693151AF4EE981552 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B03BFF4B1E08A8CF0036042A /* Pods_GorgonBase_GorgonTests.framework */,
 				D48A9AE377EC2AC53C36540A /* Pods.framework */,
 				2B77DA0D064629ED2391765A /* Pods_CobraBase_Medusa.framework */,
 				A16A11B3875F690526E73FDB /* Pods_CobraBase_MedusaTests.framework */,
+				EAE0E46D16E9B1C852913ECE /* Pods_CobraBase_Hydra.framework */,
+				2AE7C829D8DB9C26A4AA0788 /* Pods_CobraBase_HydraTests.framework */,
+				6C00D4B501C2F264259EE50F /* Pods_GorgonBase_Gorgon.framework */,
+				D4B30F873B386B5F72C3F4BB /* Pods_GorgonBase_GorgonTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,10 +190,10 @@
 		C47FE24645BBCE178323985E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				674EFCEE62F26B39B127E237 /* Pods-CobraBase-Medusa.debug.xcconfig */,
-				1A5980CF567E4DF9352B0845 /* Pods-CobraBase-Medusa.release.xcconfig */,
-				8C44ECF38CCBB21F8422C887 /* Pods-CobraBase-MedusaTests.debug.xcconfig */,
-				5B1BAA90F76A8F7CD857E648 /* Pods-CobraBase-MedusaTests.release.xcconfig */,
+				A5C17557B838F42AACA62D7B /* Pods-GorgonBase-Gorgon.debug.xcconfig */,
+				0FA54B2BEFEAB56CFB77C00C /* Pods-GorgonBase-Gorgon.release.xcconfig */,
+				687AFBF023C19838E4A3041F /* Pods-GorgonBase-GorgonTests.debug.xcconfig */,
+				B45FE4DFBDCAC8049AD9AF10 /* Pods-GorgonBase-GorgonTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -189,16 +205,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903EDF0B1CC19DAA00AF813C /* Medusa.h in Headers */,
+				903EDF0B1CC19DAA00AF813C /* Gorgon.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		903EDF061CC19DAA00AF813C /* Medusa */ = {
+		903EDF061CC19DAA00AF813C /* Gorgon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 903EDF1B1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "Medusa" */;
+			buildConfigurationList = 903EDF1B1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "Gorgon" */;
 			buildPhases = (
 				7FE373636F9350DCD8EACD35 /* [CP] Check Pods Manifest.lock */,
 				903EDF021CC19DAA00AF813C /* Sources */,
@@ -211,14 +227,14 @@
 			);
 			dependencies = (
 			);
-			name = Medusa;
+			name = Gorgon;
 			productName = Medusa;
-			productReference = 903EDF071CC19DAA00AF813C /* Medusa.framework */;
+			productReference = 903EDF071CC19DAA00AF813C /* Gorgon.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		903EDF101CC19DAA00AF813C /* MedusaTests */ = {
+		903EDF101CC19DAA00AF813C /* GorgonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 903EDF1E1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "MedusaTests" */;
+			buildConfigurationList = 903EDF1E1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "GorgonTests" */;
 			buildPhases = (
 				3F4115D9D9B5944511CE1C20 /* [CP] Check Pods Manifest.lock */,
 				903EDF0D1CC19DAA00AF813C /* Sources */,
@@ -232,9 +248,9 @@
 			dependencies = (
 				903EDF141CC19DAA00AF813C /* PBXTargetDependency */,
 			);
-			name = MedusaTests;
+			name = GorgonTests;
 			productName = MedusaTests;
-			productReference = 903EDF111CC19DAA00AF813C /* MedusaTests.xctest */;
+			productReference = 903EDF111CC19DAA00AF813C /* GorgonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -257,7 +273,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 903EDF011CC19DAA00AF813C /* Build configuration list for PBXProject "Medusa" */;
+			buildConfigurationList = 903EDF011CC19DAA00AF813C /* Build configuration list for PBXProject "Gorgon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -269,8 +285,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				903EDF061CC19DAA00AF813C /* Medusa */,
-				903EDF101CC19DAA00AF813C /* MedusaTests */,
+				903EDF061CC19DAA00AF813C /* Gorgon */,
+				903EDF101CC19DAA00AF813C /* GorgonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -335,7 +351,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CobraBase-MedusaTests/Pods-CobraBase-MedusaTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GorgonBase-GorgonTests/Pods-GorgonBase-GorgonTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A728934509D57D240A6698F9 /* [CP] Copy Pods Resources */ = {
@@ -350,7 +366,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CobraBase-Medusa/Pods-CobraBase-Medusa-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GorgonBase-Gorgon/Pods-GorgonBase-Gorgon-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9FEA7B5BD0B5B34EE6D7204 /* [CP] Embed Pods Frameworks */ = {
@@ -365,7 +381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CobraBase-MedusaTests/Pods-CobraBase-MedusaTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GorgonBase-GorgonTests/Pods-GorgonBase-GorgonTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -406,7 +422,7 @@
 /* Begin PBXTargetDependency section */
 		903EDF141CC19DAA00AF813C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 903EDF061CC19DAA00AF813C /* Medusa */;
+			target = 903EDF061CC19DAA00AF813C /* Gorgon */;
 			targetProxy = 903EDF131CC19DAA00AF813C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -505,17 +521,21 @@
 		};
 		903EDF1C1CC19DAA00AF813C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 674EFCEE62F26B39B127E237 /* Pods-CobraBase-Medusa.debug.xcconfig */;
+			baseConfigurationReference = A5C17557B838F42AACA62D7B /* Pods-GorgonBase-Gorgon.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.Medusa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.Gorgon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -525,17 +545,21 @@
 		};
 		903EDF1D1CC19DAA00AF813C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A5980CF567E4DF9352B0845 /* Pods-CobraBase-Medusa.release.xcconfig */;
+			baseConfigurationReference = 0FA54B2BEFEAB56CFB77C00C /* Pods-GorgonBase-Gorgon.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.Medusa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.Gorgon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -544,11 +568,11 @@
 		};
 		903EDF1F1CC19DAA00AF813C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C44ECF38CCBB21F8422C887 /* Pods-CobraBase-MedusaTests.debug.xcconfig */;
+			baseConfigurationReference = 687AFBF023C19838E4A3041F /* Pods-GorgonBase-GorgonTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.MedusaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.GorgonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -556,11 +580,11 @@
 		};
 		903EDF201CC19DAA00AF813C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B1BAA90F76A8F7CD857E648 /* Pods-CobraBase-MedusaTests.release.xcconfig */;
+			baseConfigurationReference = B45FE4DFBDCAC8049AD9AF10 /* Pods-GorgonBase-GorgonTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.MedusaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.GorgonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -569,7 +593,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		903EDF011CC19DAA00AF813C /* Build configuration list for PBXProject "Medusa" */ = {
+		903EDF011CC19DAA00AF813C /* Build configuration list for PBXProject "Gorgon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				903EDF191CC19DAA00AF813C /* Debug */,
@@ -578,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		903EDF1B1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "Medusa" */ = {
+		903EDF1B1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "Gorgon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				903EDF1C1CC19DAA00AF813C /* Debug */,
@@ -587,7 +611,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		903EDF1E1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "MedusaTests" */ = {
+		903EDF1E1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "GorgonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				903EDF1F1CC19DAA00AF813C /* Debug */,

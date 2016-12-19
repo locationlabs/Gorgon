@@ -1,4 +1,4 @@
-
+import Foundation
 
 final public class Log {
     public static var enableDebugging = false
@@ -6,6 +6,6 @@ final public class Log {
 
 func logDebug(_ message: @autoclosure () -> String) {
     if Log.enableDebugging {
-        NSLog("[Medusa] \(message())")
+        NSLog("[Gorgon] \(message())")
     }
 }

@@ -37,7 +37,7 @@ To install Medusa with CocoaPods, add the following lines to your `Podfile`.
     platform :ios, '8.0'
     use_frameworks!
 
-    pod 'Medusa', '~> 1.0'
+    pod 'Hydra', '~> 1.0'
 
 Then run `pod install` command. For details of the installation and usage of CocoaPods, visit [its official website](https://cocoapods.org).
 
@@ -46,7 +46,7 @@ Then run `pod install` command. For details of the installation and usage of Coc
 To install Medusa with Carthage, add the following line to your `Cartfile`.
 
 ```
-github "locationlabs/Medusa" ~> 1.1
+github "locationlabs/Hydra" ~> 1.1
 ```
 
 Then run `carthage update`. For details of the installation and usage of Carthage, visit [its project page](https://github.com/Carthage/Carthage).
