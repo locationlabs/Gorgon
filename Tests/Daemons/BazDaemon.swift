@@ -7,14 +7,14 @@ class BazDaemon: NotificationCenterDaemonType {
         "BazNotification": #selector(doBazNotification(_:))
     ]
     
-    @objc func doBazNotification(notification: NSNotification) {
+    @objc func doBazNotification(_ notification: Notification) {
         
     }
 }
 
 // MARK: - ApplicationDidBecomeActiveDaemonType
 extension BazDaemon: ApplicationDaemonType {
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         
     }
 }

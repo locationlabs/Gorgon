@@ -8,14 +8,16 @@ use_frameworks!
 abstract_target 'CobraBase' do
 
    # framework dependencies
-   pod 'Swinject', '~> 1.1'
+   pod 'Swinject', '~> 2.0.0-beta.2'
+   pod 'SwinjectPropertyLoader', '1.0.0-beta.2'
 
    target 'Medusa' do
    end
 
    # test specific dependencies
    target 'MedusaTests' do
-      pod 'Quick', '~> 0.9.2'
-      pod 'Nimble', '~> 4.0'
+      pod 'Quick', '~> 1.0.0'
+      pod 'Nimble', '~> 5.1.1'
    end
 end
+

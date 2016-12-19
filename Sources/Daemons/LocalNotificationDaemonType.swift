@@ -17,7 +17,7 @@ public protocol LocalNotificationDaemonType: DaemonType {
      
      - parameter userInfo:          the userInfo attached to the local notification
      */
-    func handleNotification(userInfo: [String:AnyObject]?)
+    func handleNotification(_ userInfo: [String:AnyObject]?)
 }
 
 /**
@@ -32,5 +32,5 @@ public protocol LocalActionNotificationDaemonType: LocalNotificationDaemonType {
      - parameter userInfo:          the userInfo attached to the local notification
      - parameter completionHandler: the completion handler to be called once the action has been completed
      */
-    func handleActionWithIdentifier(identifier: String?, userInfo: [String:AnyObject]?, completionHandler: () -> Void)
+    func handleActionWithIdentifier(_ identifier: String?, userInfo: [String:AnyObject]?, completionHandler: () -> Void)
 }

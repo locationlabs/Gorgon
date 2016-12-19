@@ -10,14 +10,14 @@ import Foundation
 final public class DaemonManager {
     
     /// list of daemons for the application
-    private var daemons = [DaemonType]()
+    fileprivate var daemons = [DaemonType]()
         
     init() {
         self.registerLifecycleNotifications()
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     /**
@@ -25,16 +25,16 @@ final public class DaemonManager {
      
      - parameter daemon: the daemon to register
      */
-    public func register(daemon: DaemonType) {
+    public func register(_ daemon: DaemonType) {
         daemons.append(daemon)
         
         // setup notification handlers for daemon
         if let notificationCenterDaemon = daemon as? NotificationCenterDaemonType {
             for (notificationName, selector) in notificationCenterDaemon.notificationToSelectors {
-                NSNotificationCenter.defaultCenter()
+                NotificationCenter.default
                     .addObserver(daemon,
                                  selector: selector,
-                                 name: notificationName,
+                                 name: NSNotification.Name(rawValue: notificationName),
                                  object: nil)
             }
         }
@@ -47,7 +47,7 @@ final public class DaemonManager {
      
      - returns: the daemons that implement the given type
      */
-    func daemonsForType<T>(type: T.Type) -> [T] {
+    func daemonsForType<T>(_ type: T.Type) -> [T] {
         return daemons.map { $0 as? T }.flatMap { $0 }
     }
 }
@@ -59,7 +59,7 @@ public extension DaemonManager {
 
 // MARK: - URL
 public extension DaemonManager {
-    public func application(application: UIApplication, openURL url: NSURL,
+    public func application(_ application: UIApplication, openURL url: URL,
                             sourceApplication: String?, annotation: AnyObject) -> Bool
     {
         logDebug("Application open url, url=\(url.path), query=\(url.query), scheme=\(url.scheme),"
@@ -78,7 +78,7 @@ public extension DaemonManager {
 // MARK: - Local Notifications
 public extension DaemonManager {
     
-    public func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+    public func application(_ application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         guard let category = notification.category else {
             logDebug("Application did receive location notification without category")
             return
@@ -96,7 +96,7 @@ public extension DaemonManager {
             + " userInfo=\(notification.userInfo)")
     }
     
-    public func application(application: UIApplication, handleActionWithIdentifier identifier: String?,
+    public func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?,
                             forLocalNotification notification: UILocalNotification, completionHandler: () -> Void)
     {
         guard let category = notification.category else {
@@ -129,7 +129,7 @@ public extension DaemonManager {
      
      - parameter token: the push token
      */
-    public func deviceTokenRegistered(token: Token) {
+    public func deviceTokenRegistered(_ token: Token) {
         logDebug("Application device token registered, token=\(token)")
         for daemon in DaemonManager.sharedInstance.daemonsForType(DeviceDaemonType.self) {
             daemon.deviceTokenRegistered(token)
@@ -143,7 +143,7 @@ public extension DaemonManager {
      - parameter userInfo:   the payload of the push
      - parameter completion: the completion callback
      */
-    public func handleRemoveNotification(userInfo: [NSObject:AnyObject], completion: (UIBackgroundFetchResult) -> Void) {
+    public func handleRemoveNotification(_ userInfo: [AnyHashable: Any], completion: (UIBackgroundFetchResult) -> Void) {
         if let userInfo = userInfo as? [String:AnyObject], let aps = userInfo["aps"] as? [String:AnyObject] {
             // Pushes from legacy systems may not have a category.  We support them
             // with this constant.  Only one daemon can have no category.
@@ -164,70 +164,70 @@ public extension DaemonManager {
             }
         }
         logDebug("Application unable to handle remove notification, userInfo=\(userInfo)")
-        completion(.NoData)
+        completion(.noData)
     }
 }
 
 // MARK: - Notifications for Application Lifecycle
 extension DaemonManager {
-    private func registerLifecycleNotifications() {
-        NSNotificationCenter.defaultCenter()
+    fileprivate func registerLifecycleNotifications() {
+        NotificationCenter.default
             .addObserver(self, selector: #selector(onApplicationDidFinishLaunching(_:)),
-                         name: UIApplicationDidFinishLaunchingNotification, object: nil)
-        NSNotificationCenter.defaultCenter()
+                         name: NSNotification.Name.UIApplicationDidFinishLaunching, object: nil)
+        NotificationCenter.default
             .addObserver(self, selector: #selector(onApplicationWillResignActive(_:)),
-                         name: UIApplicationWillResignActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter()
+                         name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default
             .addObserver(self, selector: #selector(onApplicationDidEnterBackground(_:)),
-                         name: UIApplicationDidEnterBackgroundNotification, object: nil)
-        NSNotificationCenter.defaultCenter()
+                         name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default
             .addObserver(self, selector: #selector(onApplicationWillEnterForeground(_:)),
-                         name: UIApplicationWillEnterForegroundNotification, object: nil)
-        NSNotificationCenter.defaultCenter()
+                         name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default
             .addObserver(self, selector: #selector(onApplicationDidBecomeActive(_:)),
-                         name: UIApplicationDidBecomeActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter()
+                         name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default
             .addObserver(self, selector: #selector(onApplicationWillTerminate(_:)),
-                         name: UIApplicationWillTerminateNotification, object: nil)
+                         name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
     }
     
-    @objc func onApplicationDidFinishLaunching(notification: NSNotification) {
-        let launchOptions = notification.userInfo?[UIApplicationLaunchOptionsUserActivityDictionaryKey] as? [NSObject:AnyObject]
+    @objc func onApplicationDidFinishLaunching(_ notification: Notification) {
+        let launchOptions = notification.userInfo?[UIApplicationLaunchOptionsKey.userActivityDictionary] as? [AnyHashable: Any]
         logDebug("Application did Finish launching with options, options=\(launchOptions)")
         for daemon in daemonsForType(ApplicationDaemonType.self) {
-            daemon.application(UIApplication.sharedApplication(), didFinishLaunchingWithOptions: launchOptions)
+            daemon.application(UIApplication.shared, didFinishLaunchingWithOptions: launchOptions)
         }
     }
     
-    @objc func onApplicationWillResignActive(notification: NSNotification) {
+    @objc func onApplicationWillResignActive(_ notification: Notification) {
         logDebug("Application will resign active")
         for daemon in daemonsForType(ApplicationDaemonType.self) {
-            daemon.applicationWillResignActive(UIApplication.sharedApplication())
+            daemon.applicationWillResignActive(UIApplication.shared)
         }
     }
     
-    @objc func onApplicationDidEnterBackground(notification: NSNotification) {
+    @objc func onApplicationDidEnterBackground(_ notification: Notification) {
         logDebug("Application did enter background")
         for daemon in daemonsForType(ApplicationDaemonType.self) {
-            daemon.applicationDidEnterBackground(UIApplication.sharedApplication())
+            daemon.applicationDidEnterBackground(UIApplication.shared)
         }
     }
     
-    @objc func onApplicationWillEnterForeground(notification: NSNotification) {
+    @objc func onApplicationWillEnterForeground(_ notification: Notification) {
         logDebug("Application will enter foreground")
         for daemon in daemonsForType(ApplicationDaemonType.self) {
-            daemon.applicationWillEnterForeground(UIApplication.sharedApplication())
+            daemon.applicationWillEnterForeground(UIApplication.shared)
         }
     }
     
-    @objc func onApplicationDidBecomeActive(notification: NSNotification) {
+    @objc func onApplicationDidBecomeActive(_ notification: Notification) {
         logDebug("Application did become active")
         for daemon in daemonsForType(ApplicationDaemonType.self) {
-            daemon.applicationDidBecomeActive(UIApplication.sharedApplication())
+            daemon.applicationDidBecomeActive(UIApplication.shared)
         }
     }
     
-    @objc func onApplicationWillTerminate(application: UIApplication) {
+    @objc func onApplicationWillTerminate(_ application: UIApplication) {
         logDebug("Application will terminate")
         for daemon in daemonsForType(ApplicationDaemonType.self) {
             daemon.applicationWillTerminate(application)

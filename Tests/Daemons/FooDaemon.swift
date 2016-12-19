@@ -8,7 +8,7 @@ class FooDaemon {
 
 // MARK: - ApplicationDidBecomeActiveDaemonType
 extension FooDaemon: ApplicationDaemonType {
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         
     }
 }

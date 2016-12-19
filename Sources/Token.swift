@@ -7,12 +7,12 @@ import Foundation
 final public class Token {
     
     /// the push token that is used to idenitify the client
-    public let token: NSData
+    public let token: Data
     
     /// the origin of the push token
     public let origin: Origin
     
-    init(token: NSData, origin: Origin) {
+    init(token: Data, origin: Origin) {
         self.token = token
         self.origin = origin
     }

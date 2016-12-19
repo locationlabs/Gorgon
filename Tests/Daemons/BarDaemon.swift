@@ -7,7 +7,7 @@ class BarDaemon: NotificationCenterDaemonType {
         "BarNotification": #selector(doBarNotification(_:))
     ]
     
-    @objc func doBarNotification(notification: NSNotification) {
+    @objc func doBarNotification(_ notification: Notification) {
         
     }
 }

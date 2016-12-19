@@ -33,5 +33,5 @@ public protocol UrlDaemonType: DaemonType  {
      
      - returns: true if handled, false otherwise
      */
-    func handleUrl(url: NSURL, fragments: [String:String], queryParams: [String:String]) -> Bool
+    func handleUrl(_ url: URL, fragments: [String:String], queryParams: [String:String]) -> Bool
 }
