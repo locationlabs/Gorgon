@@ -28,8 +28,6 @@
 		903EDF8A1CC5A4AE00AF813C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF861CC5A46000AF813C /* Log.swift */; };
 		B03BFF4C1E08A8CF0036042A /* Pods_GorgonBase_GorgonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03BFF4B1E08A8CF0036042A /* Pods_GorgonBase_GorgonTests.framework */; };
 		B05EF1011E08635F003E6C89 /* DaemonManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF391CC1B7CC00AF813C /* DaemonManagerSpec.swift */; };
-		B884EA69CA39E30F5F8E2A68 /* Pods_CobraBase_MedusaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16A11B3875F690526E73FDB /* Pods_CobraBase_MedusaTests.framework */; };
-		F0F501E746BE53716D980364 /* Pods_CobraBase_HydraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE7C829D8DB9C26A4AA0788 /* Pods_CobraBase_HydraTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				903EDF121CC19DAA00AF813C /* Gorgon.framework in Frameworks */,
-				B884EA69CA39E30F5F8E2A68 /* Pods_CobraBase_MedusaTests.framework in Frameworks */,
-				F0F501E746BE53716D980364 /* Pods_CobraBase_HydraTests.framework in Frameworks */,
 				4742497C12CAD433D922E3BA /* Pods_GorgonBase_GorgonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 687AFBF023C19838E4A3041F /* Pods-GorgonBase-GorgonTests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.GorgonTests;
@@ -582,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B45FE4DFBDCAC8049AD9AF10 /* Pods-GorgonBase-GorgonTests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.GorgonTests;
