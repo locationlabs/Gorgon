@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-@testable import Medusa
+@testable import Gorgon
 
 
 class DaemonManagerSpec: QuickSpec {

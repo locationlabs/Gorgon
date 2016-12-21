@@ -5,17 +5,19 @@ platform :ios, '8.0'
 # flag makes all dependencies build as frameworks
 use_frameworks!
 
-abstract_target 'CobraBase' do
+abstract_target 'GorgonBase' do
 
    # framework dependencies
-   pod 'Swinject', '~> 1.1'
+   pod 'Swinject', '~> 2.0.0-beta.2'
+   pod 'SwinjectPropertyLoader', '1.0.0-beta.2'
 
-   target 'Medusa' do
+   target 'Gorgon' do
    end
 
    # test specific dependencies
-   target 'MedusaTests' do
-      pod 'Quick', '~> 0.9.2'
-      pod 'Nimble', '~> 4.0'
+   target 'GorgonTests' do
+      pod 'Quick'
+      pod 'Nimble'
    end
 end
+

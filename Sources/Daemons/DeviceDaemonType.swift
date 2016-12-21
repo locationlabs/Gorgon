@@ -11,5 +11,5 @@ public protocol DeviceDaemonType: DaemonType {
      
      - parameter token: the device token to target push notifications
      */
-    func deviceTokenRegistered(token: Token)
+    func deviceTokenRegistered(_ token: Token)
 }

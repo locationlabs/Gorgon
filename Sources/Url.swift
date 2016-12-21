@@ -7,12 +7,12 @@ import Foundation
 final class Url {
     
     /// the url delivered to the application
-    private let url: NSURL
+    fileprivate let url: URL
     
     /// the application that delivered the url
-    private let sourceApplication: String?
+    fileprivate let sourceApplication: String?
     
-    init(url: NSURL, sourceApplication: String?) {
+    init(url: URL, sourceApplication: String?) {
         self.url = url
         self.sourceApplication = sourceApplication
     }
@@ -25,21 +25,18 @@ final class Url {
      
      - returns: the url fragments if the url matches, otherwise will return nil
      */
-    func matchUrlPathAndBuildFragments(host: String, path: String) -> [String:String]? {
-        guard let urlPath = url.path else {
-            return nil
-        }
+    func matchUrlPathAndBuildFragments(_ host: String, path: String) -> [String:String]? {
         guard url.host == host else {
             return nil
         }
         
         // internal function to parse the url path into parts
-        func toParts(value: String) -> [String] {
-            return value.componentsSeparatedByString("/").filter { !$0.isEmpty }
+        func toParts(_ value: String) -> [String] {
+            return value.components(separatedBy: "/").filter { !$0.isEmpty }
         }
         
         // convert paths into parts for comparison
-        let pathParts = toParts(urlPath)
+        let pathParts = toParts(url.path)
         let handlerPathParts = toParts(path)
         
         // if pairs don't match, it does not match the url
@@ -49,9 +46,9 @@ final class Url {
         
         // generate fragments and ensure matches
         var fragments = [String:String]()
-        for (index, part) in handlerPathParts.enumerate() {
+        for (index, part) in handlerPathParts.enumerated() {
             if part.hasPrefix(":") {
-                let key = (part as NSString).substringFromIndex(1)
+                let key = (part as NSString).substring(from: 1)
                 fragments[key] = pathParts[index]
             } else if part != pathParts[index] {
                 return nil
@@ -71,14 +68,14 @@ final class Url {
      */
     func paramsForQueryString() -> [String:String] {
         var params = [String:String]()
-        if let parts = url.query?.componentsSeparatedByString("&") {
+        if let parts = url.query?.components(separatedBy: "&") {
             for part in parts {
-                let pairs = part.componentsSeparatedByString("=")
+                let pairs = part.components(separatedBy: "=")
                 if pairs.count == 2 {
                     // handle encodings
                     params[pairs[0]] = pairs[1]
-                        .stringByReplacingOccurrencesOfString("+", withString: " ")
-                        .stringByRemovingPercentEncoding
+                        .replacingOccurrences(of: "+", with: " ")
+                        .removingPercentEncoding
                 }
             }
         }
