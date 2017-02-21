@@ -143,7 +143,7 @@ public extension DaemonManager {
      - parameter userInfo:   the payload of the push
      - parameter completion: the completion callback
      */
-    public func handleRemoveNotification(_ userInfo: [AnyHashable: Any], completion: (UIBackgroundFetchResult) -> Void) {
+    public func handleRemoteNotification(_ userInfo: [AnyHashable: Any], completion: (UIBackgroundFetchResult) -> Void) {
         if let userInfo = userInfo as? [String:AnyObject], let aps = userInfo["aps"] as? [String:AnyObject] {
             // Pushes from legacy systems may not have a category.  We support them
             // with this constant.  Only one daemon can have no category.
