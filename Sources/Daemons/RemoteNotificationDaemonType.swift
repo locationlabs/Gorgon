@@ -24,5 +24,5 @@ public protocol RemoteNotificationDaemonType: DaemonType {
      - parameter notification: the `aps` userInfo object
      - parameter completion:   the completion handler to be called once the processing is completed
      */
-    func handleNotification(_ notification: [String:AnyObject], completion: (UIBackgroundFetchResult) -> ())
+    func handleNotification(_ notification: [String:AnyObject], completion: @escaping (UIBackgroundFetchResult) -> ())
 }

@@ -97,7 +97,7 @@ public extension DaemonManager {
     }
     
     public func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?,
-                            forLocalNotification notification: UILocalNotification, completionHandler: () -> Void)
+                            forLocalNotification notification: UILocalNotification, completionHandler: @escaping () -> Void)
     {
         guard let category = notification.category else {
             logDebug("Application did receive local notification handle action with identifer without category")
@@ -143,7 +143,7 @@ public extension DaemonManager {
      - parameter userInfo:   the payload of the push
      - parameter completion: the completion callback
      */
-    public func handleRemoteNotification(_ userInfo: [AnyHashable: Any], completion: (UIBackgroundFetchResult) -> Void) {
+    public func handleRemoteNotification(_ userInfo: [AnyHashable: Any], completion: @escaping (UIBackgroundFetchResult) -> Void) {
         if let userInfo = userInfo as? [String:AnyObject], let aps = userInfo["aps"] as? [String:AnyObject] {
             // Pushes from legacy systems may not have a category.  We support them
             // with this constant.  Only one daemon can have no category.
