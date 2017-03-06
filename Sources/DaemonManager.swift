@@ -47,7 +47,7 @@ final public class DaemonManager {
      
      - returns: the daemons that implement the given type
      */
-    func daemonsForType<T>(_ type: T.Type) -> [T] {
+    public func daemonsForType<T>(_ type: T.Type) -> [T] {
         return daemons.map { $0 as? T }.flatMap { $0 }
     }
 }
