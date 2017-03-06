@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,20 +17,6 @@
                BlueprintIdentifier = "903EDF061CC19DAA00AF813C"
                BuildableName = "Gorgon.framework"
                BlueprintName = "Gorgon"
-               ReferencedContainer = "container:Gorgon.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "903EDF101CC19DAA00AF813C"
-               BuildableName = "GorgonTests.xctest"
-               BlueprintName = "GorgonTests"
                ReferencedContainer = "container:Gorgon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
