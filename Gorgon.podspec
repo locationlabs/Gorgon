@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name                      = 'Gorgon'
   s.module_name               = 'Gorgon'
-  s.version                   = '2.2.0'
+  s.version                   = '3.0.0'
   s.summary                   = 'Application daemon framework for Single Responsibility Principle abstractions of the UIApplicationDelegate'
   s.homepage                  = 'http://www.locationlabs.com'
   s.license                   = 'APL2'
