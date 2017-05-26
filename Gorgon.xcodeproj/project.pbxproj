@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		489FEE631E6E1BB3009ADAAD /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 489FEE5A1E6E1B8C009ADAAD /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		489FEE641E6E1BB3009ADAAD /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 489FEE5B1E6E1B8C009ADAAD /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		489FEE651E6E1BB3009ADAAD /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 489FEE5C1E6E1B8C009ADAAD /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		489FEE661E6E1BB3009ADAAD /* SwinjectPropertyLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 489FEE5D1E6E1B8C009ADAAD /* SwinjectPropertyLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F9E94A71ED7B29C004A7FB6 /* GorgonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9E94A61ED7B29C004A7FB6 /* GorgonTests.swift */; };
+		8F9E94A91ED7B29C004A7FB6 /* Gorgon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903EDF071CC19DAA00AF813C /* Gorgon.framework */; };
 		903EDF0B1CC19DAA00AF813C /* Gorgon.h in Headers */ = {isa = PBXBuildFile; fileRef = 903EDF0A1CC19DAA00AF813C /* Gorgon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		903EDF121CC19DAA00AF813C /* Gorgon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903EDF071CC19DAA00AF813C /* Gorgon.framework */; };
-		903EDF171CC19DAA00AF813C /* UrlSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF161CC19DAA00AF813C /* UrlSpecs.swift */; };
 		903EDF261CC1B5FF00AF813C /* DaemonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF251CC1B5FF00AF813C /* DaemonManager.swift */; };
 		903EDF2E1CC1B64300AF813C /* ApplicationDaemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF271CC1B64300AF813C /* ApplicationDaemonType.swift */; };
 		903EDF2F1CC1B64300AF813C /* DaemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF281CC1B64300AF813C /* DaemonType.swift */; };
@@ -24,49 +20,37 @@
 		903EDF341CC1B64300AF813C /* UrlDaemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF2D1CC1B64300AF813C /* UrlDaemonType.swift */; };
 		903EDF371CC1B6D200AF813C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF351CC1B6D200AF813C /* Token.swift */; };
 		903EDF381CC1B6D200AF813C /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF361CC1B6D200AF813C /* Url.swift */; };
-		903EDF3F1CC1B81200AF813C /* BarDaemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF3C1CC1B81200AF813C /* BarDaemon.swift */; };
-		903EDF401CC1B81200AF813C /* BazDaemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF3D1CC1B81200AF813C /* BazDaemon.swift */; };
-		903EDF411CC1B81200AF813C /* FooDaemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF3E1CC1B81200AF813C /* FooDaemon.swift */; };
 		903EDF8A1CC5A4AE00AF813C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF861CC5A46000AF813C /* Log.swift */; };
-		B05EF1011E08635F003E6C89 /* DaemonManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903EDF391CC1B7CC00AF813C /* DaemonManagerSpec.swift */; };
+		E483DC01C87857B58F588F7E /* Pods_GorgonBase_Gorgon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4323E581802FF2CC87C1D9EA /* Pods_GorgonBase_Gorgon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		903EDF131CC19DAA00AF813C /* PBXContainerItemProxy */ = {
+		8F9E94AA1ED7B29C004A7FB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 903EDEFE1CC19DAA00AF813C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 903EDF061CC19DAA00AF813C;
-			remoteInfo = Medusa;
+			remoteInfo = Gorgon;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		489FEE621E6E1BAA009ADAAD /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				489FEE631E6E1BB3009ADAAD /* Nimble.framework in Embed Frameworks */,
-				489FEE641E6E1BB3009ADAAD /* Quick.framework in Embed Frameworks */,
-				489FEE651E6E1BB3009ADAAD /* Swinject.framework in Embed Frameworks */,
-				489FEE661E6E1BB3009ADAAD /* SwinjectPropertyLoader.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		2376B2F2915F2977385CCA6B /* Pods-GorgonBase-GorgonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorgonBase-GorgonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorgonBase-GorgonTests/Pods-GorgonBase-GorgonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4323E581802FF2CC87C1D9EA /* Pods_GorgonBase_Gorgon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GorgonBase_Gorgon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		489FEE5A1E6E1B8C009ADAAD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		489FEE5B1E6E1B8C009ADAAD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		489FEE5C1E6E1B8C009ADAAD /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		489FEE5D1E6E1B8C009ADAAD /* SwinjectPropertyLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectPropertyLoader.framework; path = Carthage/Build/iOS/SwinjectPropertyLoader.framework; sourceTree = "<group>"; };
+		65606885966F18880EA8DAA6 /* Pods-GorgonBase-Gorgon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorgonBase-Gorgon.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorgonBase-Gorgon/Pods-GorgonBase-Gorgon.release.xcconfig"; sourceTree = "<group>"; };
+		8B46ED9689A5E104B660D336 /* Pods-GorgonBase-Gorgon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorgonBase-Gorgon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorgonBase-Gorgon/Pods-GorgonBase-Gorgon.debug.xcconfig"; sourceTree = "<group>"; };
+		8F9E94971ED7B1F5004A7FB6 /* GorgonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorgonTests.swift; sourceTree = "<group>"; };
+		8F9E94991ED7B1F5004A7FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F9E94A41ED7B29C004A7FB6 /* GorgonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorgonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F9E94A61ED7B29C004A7FB6 /* GorgonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorgonTests.swift; sourceTree = "<group>"; };
+		8F9E94A81ED7B29C004A7FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		903EDF071CC19DAA00AF813C /* Gorgon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gorgon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		903EDF0A1CC19DAA00AF813C /* Gorgon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gorgon.h; sourceTree = "<group>"; };
 		903EDF0C1CC19DAA00AF813C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		903EDF111CC19DAA00AF813C /* GorgonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorgonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		903EDF161CC19DAA00AF813C /* UrlSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSpecs.swift; sourceTree = "<group>"; };
 		903EDF181CC19DAA00AF813C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		903EDF251CC1B5FF00AF813C /* DaemonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DaemonManager.swift; path = Sources/DaemonManager.swift; sourceTree = SOURCE_ROOT; };
@@ -84,34 +68,69 @@
 		903EDF3D1CC1B81200AF813C /* BazDaemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BazDaemon.swift; sourceTree = "<group>"; };
 		903EDF3E1CC1B81200AF813C /* FooDaemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooDaemon.swift; sourceTree = "<group>"; };
 		903EDF861CC5A46000AF813C /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		A571589CD500C2254F38FE5A /* Pods-GorgonBase-GorgonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorgonBase-GorgonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorgonBase-GorgonTests/Pods-GorgonBase-GorgonTests.release.xcconfig"; sourceTree = "<group>"; };
+		F9DCB9038AE2799602A6E055 /* Pods_GorgonBase_GorgonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GorgonBase_GorgonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8F9E94A11ED7B29C004A7FB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9E94A91ED7B29C004A7FB6 /* Gorgon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		903EDF031CC19DAA00AF813C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		903EDF0E1CC19DAA00AF813C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				903EDF121CC19DAA00AF813C /* Gorgon.framework in Frameworks */,
+				E483DC01C87857B58F588F7E /* Pods_GorgonBase_Gorgon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DA58CF6860022C910C83107 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B46ED9689A5E104B660D336 /* Pods-GorgonBase-Gorgon.debug.xcconfig */,
+				65606885966F18880EA8DAA6 /* Pods-GorgonBase-Gorgon.release.xcconfig */,
+				2376B2F2915F2977385CCA6B /* Pods-GorgonBase-GorgonTests.debug.xcconfig */,
+				A571589CD500C2254F38FE5A /* Pods-GorgonBase-GorgonTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F9E94961ED7B1F5004A7FB6 /* GorgonTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F9E94971ED7B1F5004A7FB6 /* GorgonTests.swift */,
+				8F9E94991ED7B1F5004A7FB6 /* Info.plist */,
+			);
+			path = GorgonTests;
+			sourceTree = "<group>";
+		};
+		8F9E94A51ED7B29C004A7FB6 /* GorgonTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F9E94A61ED7B29C004A7FB6 /* GorgonTests.swift */,
+				8F9E94A81ED7B29C004A7FB6 /* Info.plist */,
+			);
+			path = GorgonTests;
+			sourceTree = "<group>";
+		};
 		903EDEFD1CC19DAA00AF813C = {
 			isa = PBXGroup;
 			children = (
 				903EDF091CC19DAA00AF813C /* Source */,
 				903EDF151CC19DAA00AF813C /* Tests */,
+				8F9E94961ED7B1F5004A7FB6 /* GorgonTests */,
+				8F9E94A51ED7B29C004A7FB6 /* GorgonTests */,
 				903EDF081CC19DAA00AF813C /* Products */,
 				A30FD0A693151AF4EE981552 /* Frameworks */,
+				3DA58CF6860022C910C83107 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				903EDF071CC19DAA00AF813C /* Gorgon.framework */,
-				903EDF111CC19DAA00AF813C /* GorgonTests.xctest */,
+				8F9E94A41ED7B29C004A7FB6 /* GorgonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,6 +200,8 @@
 				489FEE5B1E6E1B8C009ADAAD /* Quick.framework */,
 				489FEE5C1E6E1B8C009ADAAD /* Swinject.framework */,
 				489FEE5D1E6E1B8C009ADAAD /* SwinjectPropertyLoader.framework */,
+				4323E581802FF2CC87C1D9EA /* Pods_GorgonBase_Gorgon.framework */,
+				F9DCB9038AE2799602A6E055 /* Pods_GorgonBase_GorgonTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,14 +220,34 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8F9E94A31ED7B29C004A7FB6 /* GorgonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F9E94AC1ED7B29C004A7FB6 /* Build configuration list for PBXNativeTarget "GorgonTests" */;
+			buildPhases = (
+				8F9E94A01ED7B29C004A7FB6 /* Sources */,
+				8F9E94A11ED7B29C004A7FB6 /* Frameworks */,
+				8F9E94A21ED7B29C004A7FB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F9E94AB1ED7B29C004A7FB6 /* PBXTargetDependency */,
+			);
+			name = GorgonTests;
+			productName = GorgonTests;
+			productReference = 8F9E94A41ED7B29C004A7FB6 /* GorgonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		903EDF061CC19DAA00AF813C /* Gorgon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 903EDF1B1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "Gorgon" */;
 			buildPhases = (
+				4B0F5776F897A688D89813C2 /* [CP] Check Pods Manifest.lock */,
 				903EDF021CC19DAA00AF813C /* Sources */,
 				903EDF031CC19DAA00AF813C /* Frameworks */,
 				903EDF041CC19DAA00AF813C /* Headers */,
 				903EDF051CC19DAA00AF813C /* Resources */,
+				065640DF4AEB2BD8C5E9535F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,41 +258,22 @@
 			productReference = 903EDF071CC19DAA00AF813C /* Gorgon.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		903EDF101CC19DAA00AF813C /* GorgonTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 903EDF1E1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "GorgonTests" */;
-			buildPhases = (
-				903EDF0D1CC19DAA00AF813C /* Sources */,
-				903EDF0E1CC19DAA00AF813C /* Frameworks */,
-				903EDF0F1CC19DAA00AF813C /* Resources */,
-				489FEE621E6E1BAA009ADAAD /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				903EDF141CC19DAA00AF813C /* PBXTargetDependency */,
-			);
-			name = GorgonTests;
-			productName = MedusaTests;
-			productReference = 903EDF111CC19DAA00AF813C /* GorgonTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		903EDEFE1CC19DAA00AF813C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = com.locationlabs;
 				TargetAttributes = {
-					903EDF061CC19DAA00AF813C = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0810;
-						ProvisioningStyle = Manual;
+					8F9E94A31ED7B29C004A7FB6 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = EX6732J87R;
+						ProvisioningStyle = Automatic;
 					};
-					903EDF101CC19DAA00AF813C = {
+					903EDF061CC19DAA00AF813C = {
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Manual;
@@ -271,20 +293,20 @@
 			projectRoot = "";
 			targets = (
 				903EDF061CC19DAA00AF813C /* Gorgon */,
-				903EDF101CC19DAA00AF813C /* GorgonTests */,
+				8F9E94A31ED7B29C004A7FB6 /* GorgonTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		903EDF051CC19DAA00AF813C /* Resources */ = {
+		8F9E94A21ED7B29C004A7FB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		903EDF0F1CC19DAA00AF813C /* Resources */ = {
+		903EDF051CC19DAA00AF813C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,7 +315,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		065640DF4AEB2BD8C5E9535F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GorgonBase-Gorgon/Pods-GorgonBase-Gorgon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B0F5776F897A688D89813C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		8F9E94A01ED7B29C004A7FB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9E94A71ED7B29C004A7FB6 /* GorgonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		903EDF021CC19DAA00AF813C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,29 +375,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		903EDF0D1CC19DAA00AF813C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B05EF1011E08635F003E6C89 /* DaemonManagerSpec.swift in Sources */,
-				903EDF411CC1B81200AF813C /* FooDaemon.swift in Sources */,
-				903EDF171CC19DAA00AF813C /* UrlSpecs.swift in Sources */,
-				903EDF3F1CC1B81200AF813C /* BarDaemon.swift in Sources */,
-				903EDF401CC1B81200AF813C /* BazDaemon.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		903EDF141CC19DAA00AF813C /* PBXTargetDependency */ = {
+		8F9E94AB1ED7B29C004A7FB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 903EDF061CC19DAA00AF813C /* Gorgon */;
-			targetProxy = 903EDF131CC19DAA00AF813C /* PBXContainerItemProxy */;
+			targetProxy = 8F9E94AA1ED7B29C004A7FB6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8F9E94AD1ED7B29C004A7FB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = EX6732J87R;
+				INFOPLIST_FILE = GorgonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.GorgonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8F9E94AE1ED7B29C004A7FB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = EX6732J87R;
+				INFOPLIST_FILE = GorgonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.GorgonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		903EDF191CC19DAA00AF813C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -433,6 +515,7 @@
 		};
 		903EDF1C1CC19DAA00AF813C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B46ED9689A5E104B660D336 /* Pods-GorgonBase-Gorgon.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -458,6 +541,7 @@
 		};
 		903EDF1D1CC19DAA00AF813C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65606885966F18880EA8DAA6 /* Pods-GorgonBase-Gorgon.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -480,35 +564,17 @@
 			};
 			name = Release;
 		};
-		903EDF1F1CC19DAA00AF813C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Carthage/Build/iOS\"";
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.GorgonTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		903EDF201CC19DAA00AF813C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Carthage/Build/iOS\"";
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.locationlabs.GorgonTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8F9E94AC1ED7B29C004A7FB6 /* Build configuration list for PBXNativeTarget "GorgonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9E94AD1ED7B29C004A7FB6 /* Debug */,
+				8F9E94AE1ED7B29C004A7FB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		903EDF011CC19DAA00AF813C /* Build configuration list for PBXProject "Gorgon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -523,15 +589,6 @@
 			buildConfigurations = (
 				903EDF1C1CC19DAA00AF813C /* Debug */,
 				903EDF1D1CC19DAA00AF813C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		903EDF1E1CC19DAA00AF813C /* Build configuration list for PBXNativeTarget "GorgonTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				903EDF1F1CC19DAA00AF813C /* Debug */,
-				903EDF201CC19DAA00AF813C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

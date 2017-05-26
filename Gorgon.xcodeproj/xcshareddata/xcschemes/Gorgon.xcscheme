@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "903EDF101CC19DAA00AF813C"
+               BlueprintIdentifier = "8F9E94941ED7B1F5004A7FB6"
                BuildableName = "GorgonTests.xctest"
                BlueprintName = "GorgonTests"
                ReferencedContainer = "container:Gorgon.xcodeproj">
