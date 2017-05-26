@@ -1,7 +1,14 @@
 # reference: http://www.objc.io/issue-6/travis-ci.html
 
 language: objective-c
+rvm:
+  - 2.2.1
 osx_image: xcode8
+install:
+  - gem install bundler
+  - bundle install
+  - bundle exec pod repo update
+  - bundle exec pod install
 env:
   global:
     - WORKSPACE=Gorgon.xcworkspace
@@ -10,9 +17,6 @@ env:
     - SCHEME=Gorgon
 script:
   - open -b com.apple.iphonesimulator # Workaround https://github.com/travis-ci/travis-ci/issues/3040
-  - gem install bundler
-  - bundle install
-  - bundle exec pod install
   - xcodebuild -workspace $WORKSPACE -scheme $SCHEME -sdk $SDK -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean test
 notifications:
   email:
