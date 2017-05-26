@@ -167,6 +167,12 @@ public extension DaemonManager {
         logDebug("Application unable to handle remove notification, userInfo=\(userInfo)")
         completion(.noData)
     }
+    
+    public func handleInvalidatePushToken() {
+        for daemon in DaemonManager.sharedInstance.daemonsForType(RemoteNotificationErrorDaemonType.self) {
+                daemon.didInvalidatePushToken()
+        }
+    }
 }
 
 // MARK: - Notifications for Application Lifecycle

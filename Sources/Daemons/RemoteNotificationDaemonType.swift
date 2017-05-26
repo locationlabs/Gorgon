@@ -25,4 +25,13 @@ public protocol RemoteNotificationDaemonType: DaemonType {
      - parameter completion:   the completion handler to be called once the processing is completed
      */
     func handleNotification(_ notification: [String:AnyObject], completion: @escaping (UIBackgroundFetchResult) -> ())
+    
+}
+
+public protocol RemoteNotificationErrorDaemonType: DaemonType {
+    
+    /**
+     Handle invalidate push token delegate method.
+    */
+    func didInvalidatePushToken()
 }
