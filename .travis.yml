@@ -10,6 +10,9 @@ env:
     - SCHEME=Gorgon
 script:
   - open -b com.apple.iphonesimulator # Workaround https://github.com/travis-ci/travis-ci/issues/3040
+  - gem install bundler
+  - bundle install
+  - bundle exec pod install
   - xcodebuild -workspace $WORKSPACE -scheme $SCHEME -sdk $SDK -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean test
 notifications:
   email:
