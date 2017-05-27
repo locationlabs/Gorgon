@@ -144,12 +144,13 @@ public extension DaemonManager {
      - parameter completion: the completion callback
      */
     public func handleRemoteNotification(_ userInfo: [AnyHashable: Any], completion: @escaping (UIBackgroundFetchResult) -> Void) {
-        if let userInfo = userInfo as? [String:AnyObject], let aps = userInfo["aps"] as? [String:AnyObject] {
+        if let userInfo = userInfo as? [String:AnyObject] {
             // Pushes from legacy systems may not have a category.  We support them
             // with this constant.  Only one daemon can have no category.
             var category = kRemoteNotificationNoCategory
             
-            if let categoryFromPush = aps["category"] as? String {
+            if let aps = userInfo["aps"] as? [String:AnyObject],
+                let categoryFromPush = aps["category"] as? String {
                 logDebug("Application did receive remove notification, category=\(category), userInfo=\(userInfo)")
                 category = categoryFromPush
             } else {
@@ -165,6 +166,12 @@ public extension DaemonManager {
         }
         logDebug("Application unable to handle remove notification, userInfo=\(userInfo)")
         completion(.noData)
+    }
+    
+    public func handleInvalidatePushToken() {
+        for daemon in DaemonManager.sharedInstance.daemonsForType(RemoteNotificationErrorDaemonType.self) {
+                daemon.didInvalidatePushToken()
+        }
     }
 }
 
