@@ -59,11 +59,11 @@ public extension DaemonManager {
 
 // MARK: - URL
 public extension DaemonManager {
-    public func application(_ application: UIApplication, openURL url: URL,
-                            sourceApplication: String?, annotation: AnyObject) -> Bool
-    {
-        logDebug("Application open url, url=\(url.path), query=\(url.query), scheme=\(url.scheme),"
-            + " host=\(url.host), path=\(url.path), sourceApplication=\(sourceApplication)")
+    
+    public func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let sourceApplication = options[.sourceApplication] as? String
+        logDebug("Application open url, url=\(url.path), query=\(String(describing: url.query)), scheme=\(String(describing: url.scheme)),"
+            + " host=\(String(describing: url.host)), path=\(url.path), sourceApplication=\(String(describing: sourceApplication))")
         
         let _url = Url(url: url, sourceApplication: sourceApplication)
         for daemon in daemonsForType(UrlDaemonType.self) {
@@ -73,18 +73,20 @@ public extension DaemonManager {
         }
         return false
     }
+    
 }
 
 // MARK: - Local Notifications
 public extension DaemonManager {
     
-    public func application(_ application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+    public func application(_ application: UIApplication,
+                            didReceiveLocalNotification notification: UILocalNotification) {
         guard let category = notification.category else {
             logDebug("Application did receive location notification without category")
             return
         }
         logDebug("Application did receive local notification, category=\(category),"
-            + " userInfo=\(notification.userInfo)")
+            + " userInfo=\(String(describing: notification.userInfo))")
         
         for daemon in daemonsForType(LocalNotificationDaemonType.self) {
             if daemon.category == category {
@@ -93,18 +95,19 @@ public extension DaemonManager {
             }
         }
         logDebug("Application local notification daemon not found, category=\(category),"
-            + " userInfo=\(notification.userInfo)")
+            + " userInfo=\(String(describing: notification.userInfo))")
     }
     
-    public func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?,
-                            forLocalNotification notification: UILocalNotification, completionHandler: @escaping () -> Void)
-    {
+    public func application(_ application: UIApplication,
+                            handleActionWithIdentifier identifier: String?,
+                            for notification: UILocalNotification,
+                            completionHandler: @escaping () -> Void) {
         guard let category = notification.category else {
             logDebug("Application did receive local notification handle action with identifer without category")
             return
         }
         logDebug("Application did receive local notification handle action with identifer, category=\(category),"
-            + " userInfo=\(notification.userInfo), identifier=\(identifier)")
+            + " userInfo=\(String(describing: notification.userInfo)), identifier=\(String(describing: identifier))")
         
         for daemon in daemonsForType(LocalActionNotificationDaemonType.self) {
             if daemon.category == category {
@@ -116,7 +119,7 @@ public extension DaemonManager {
         }
         
         logDebug("Application local notification daemon not found for action handler, category=\(category),"
-            + " userInfo=\(notification.userInfo), identifier=\(identifier)")
+            + " userInfo=\(String(describing: notification.userInfo)), identifier=\(String(describing: identifier))")
         completionHandler()
     }
 }
