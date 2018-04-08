@@ -13,7 +13,7 @@ env:
   global:
     - WORKSPACE=Gorgon.xcworkspace
     - SDK=iphonesimulator
-    - DESTINATION="OS=11.0,name=iPhone 8"
+    - DESTINATION="OS=11.2,name=iPhone 8"
     - SCHEME=Gorgon
 script:
   - open -b com.apple.iphonesimulator # Workaround https://github.com/travis-ci/travis-ci/issues/3040
