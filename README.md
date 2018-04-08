@@ -29,10 +29,10 @@ Gorgon is available through [CocoaPods](https://cocoapods.org).
 To install Gorgon with CocoaPods, add the following lines to your `Podfile`.
 
     source 'https://github.com/CocoaPods/Specs.git'
-    platform :ios, '8.0'
+    platform :ios, '9.0'
     use_frameworks!
 
-    pod 'Gorgon', '~> 3.0'
+    pod 'Gorgon', '~> 4.0'
 
 Then run `pod install` command. For details of the installation and usage of CocoaPods, visit [its official website](https://cocoapods.org).
 
@@ -41,7 +41,7 @@ Then run `pod install` command. For details of the installation and usage of Coc
 To install Gorgon with Carthage, add the following line to your `Cartfile`.
 
 ```
-github "locationlabs/Gorgon" ~> 3.0
+github "locationlabs/Gorgon" ~> 4.0
 ```
 
 Then run `carthage update`. For details of the installation and usage of Carthage, visit [its project page](https://github.com/Carthage/Carthage).
