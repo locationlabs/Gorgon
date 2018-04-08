@@ -2,8 +2,8 @@
 
 language: objective-c
 rvm:
-  - 2.2.1
-osx_image: xcode8
+  - 2.3.1
+osx_image: xcode9.2
 install:
   - gem install bundler
   - bundle install
@@ -13,7 +13,7 @@ env:
   global:
     - WORKSPACE=Gorgon.xcworkspace
     - SDK=iphonesimulator
-    - DESTINATION="OS=10.0,name=iPhone 6S"
+    - DESTINATION="OS=11.0,name=iPhone 8"
     - SCHEME=Gorgon
 script:
   - open -b com.apple.iphonesimulator # Workaround https://github.com/travis-ci/travis-ci/issues/3040
